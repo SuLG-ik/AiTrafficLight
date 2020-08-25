@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "439107102165",
+    "firebase_url": "https://aitrafficlights.firebaseio.com",
+    "project_id": "aitrafficlights",
+    "storage_bucket": "aitrafficlights.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439107102165:android:c268306b525bdb7714c95c",
+        "android_client_info": {
+          "package_name": "ru.sulgik.aitrafficlights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439107102165-ve8s7fgidqvrjt0043r1gbstljmvaag2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsd74M5qwJ7TklxriadYDshK9KeOZy0ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439107102165-ve8s7fgidqvrjt0043r1gbstljmvaag2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
