@@ -1,17 +1,14 @@
-package ru.sulgik.aitrafficlights
+package ru.sulgik.aitrafficlights.ui.preview
 
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.edit
 import dagger.hilt.android.AndroidEntryPoint
+import ru.sulgik.aitrafficlights.R
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class CameraPreviewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-
+        setContentView(R.layout.activity_camera_preview)
     }
 }

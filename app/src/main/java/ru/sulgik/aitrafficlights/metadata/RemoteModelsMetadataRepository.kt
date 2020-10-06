@@ -1,7 +1,14 @@
 package ru.sulgik.aitrafficlights.metadata
 
-interface RemoteModelsMetadataRepository{
+import kotlinx.coroutines.flow.Flow
+import ru.sulgik.aitrafficlights.settings.ModelsApiVersions
 
-    suspend fun fetchCoreMetadata(): ModelMetadata
+interface RemoteModelsMetadataRepository {
+
+    suspend fun coreApiVersion(): Long
+    suspend fun metadata(): ModelMetadata
+
+    val generalModelsMetadataStream: Flow<ModelMetadata>
+
 
 }

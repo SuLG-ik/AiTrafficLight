@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/setting_button"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint android:id="@+id/setting_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="0sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="15sp"
+            app:layout_constraintBottom_toTopOf="@id/setting_button"
+            app:layout_constraintEnd_toEndOf="@id/setting_button"
+            app:layout_constraintStart_toStartOf="@id/setting_button" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/setting_button"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint android:id="@+id/setting_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="5sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="15sp"
+            app:layout_constraintBottom_toTopOf="@id/setting_button"
+            app:layout_constraintEnd_toEndOf="@id/setting_button"
+            app:layout_constraintStart_toStartOf="@id/setting_button" />
+
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="50">
+
+        <OnClick app:targetId="@id/setting_button"
+            app:clickAction="transitionToEnd" />
+
+        <OnSwipe app:dragDirection="dragUp"
+            app:onTouchUp="decelerateAndComplete"/>
+
+    </Transition>
+</MotionScene>

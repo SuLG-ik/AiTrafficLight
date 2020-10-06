@@ -1,8 +1,15 @@
 package ru.sulgik.aitrafficlights.metadata
 
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
-import java.lang.IllegalStateException
+data class ModelMetadata(
+    val apiVersion: Long = 0,
+    val displayVersion: String = "uninstalled",
+) {
+    constructor(
+        apiVersion: Long?,
+        displayVersion: String?,
+    ) : this(
+        apiVersion?: 0,
+        displayVersion ?: "uninstalled",
+    )
 
-@Parcelize
-data class ModelMetadata(val version: Long = throw IllegalStateException("server doesn't get version"), val maxSize: Long = throw IllegalStateException("server doesn't get maxSize")) : Parcelable
+}
